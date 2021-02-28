@@ -1,0 +1,62 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 15.03.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 5 przykladowych programow w jezyku C:
+--------------------------------------------------------------------
+
+I.  Program wypisujacy identyfikatory dla danego procesu.
+    Program sklada sie z jednego modulu: 
+    1) cw_a.c  - program glowny. 
+
+II. Program wypisujacy identyfikatory dla procesu macierzystego oraz
+    wszystkich procesow potomnych, z uzyciem funkcji wait()(oczekiwanie
+    na zakonczenie wzsystkich procesow potomnych).	
+    Program sklada sie z jednego modulu:    
+    1) cw_b.c  - program glowny.
+
+III.Program ktory jest kolejna wersja programu II, ale z uzyciem
+    funkcji sleep() zamiast wait() oraz wyswietlienie drzewa procesow w
+    systemie systemd.
+    Program sklada sie z jednego modulu:
+    1) cw_c.c - program glowny
+
+IV.Program ktory jest takze kolejna wersja programu II, z uzyciem
+   funkcji sleep()(dwukrotnie) dla wypisywania procesow chronologicznie.
+   Program sklada sie z jednego modulu:
+   1) cw_d.c - program glowny
+
+V. Program ktory jest kolejna wersja programu IV, z uzyciem funkcji
+   setpgid() - zrobienia z kazdego procesu dziecka lidera wlasnej grupy.
+   Program sklada sie z jednego modulu:
+   1) cw_e.c - program glowny 
+
+------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic powyzsze programy, nalezy wykonac komende:
+       make startCW_a - I program
+       make startCW_b - II program
+       make startCW_c - III program
+       make startCW_d - IV program
+       make startCW_e - V program
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

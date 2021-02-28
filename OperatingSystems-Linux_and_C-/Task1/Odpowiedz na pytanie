@@ -1,0 +1,22 @@
+Ile procesow powstanie przy n-krotnym wywolaniu funkcji fork i dlaczego ?
+	Przy n-krotnym wywolaniu funkcji fork() istnieja 2^n procesow: 1 glowny i reszta dzieci.
+Odbywa sie to tak, poniewaz funkcja fork() kopiuje proces, dzieki czemu podwaja sie liczbe procesow
+za kazdym razem, gdy uzywana jest funkcja fork().
+
+Przyklad: 
+pid_t pid;
+pid = fork();
+pid = fork();
+
+	      P
+	   [fork 1]
+	      P
+		\
+		P(1)
+
+	   [fork 2]
+	      P	
+	    /   \
+          P(2)  P(1)
+		  \
+		  P(1)(2)

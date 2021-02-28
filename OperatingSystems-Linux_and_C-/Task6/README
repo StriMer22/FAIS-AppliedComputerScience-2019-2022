@@ -1,0 +1,45 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 10.05.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 1 przykladowa programe w jezyku C:
+-----------------------------------------------------------------------
+
+I.    Zaimplementowanie wzajemnego wykluczania dla procesow przy pomocy
+    semaforow nazwanych standardu POSIX. Dla demonstracji poprawnosci 
+    dzialania programu uzyc odpowiednich komunikatow wypisywanych przez 
+    poszczegolne procesy przed, w trakcie i po sekcji krytycznej oraz 
+    funkcji podajacych stan semafora i liczbe procesow pod nim czekajacych.
+      Program sklada sie z czterech modulow: 
+    1)mult.c - program glowny
+    2)sem.c, sem.h - funkcji semafora 
+    3)worker.c - wypisywanie komunikatow
+    4)func.c - zawiera funkcje otwierania/odczytu/zapisu/zamykania pliku
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszej programy, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac komende:
+   (mult <worker> <ilosc_procesow> <ilosc_sekcji_krytycznej> <metoda_dzialania>
+   (przy 1- synchronizacja semaforow, przy 0 -dzialania bez synchronizacji))
+	
+	startCW_6
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

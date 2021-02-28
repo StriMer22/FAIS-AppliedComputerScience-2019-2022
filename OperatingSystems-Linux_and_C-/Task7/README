@@ -1,0 +1,44 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 28.05.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 1 przykladowa programe w jezyku C:
+-----------------------------------------------------------------------
+
+I.    Zaimplementowanie problemu "Producenta i Konsumenta", przy pomocy 
+     pamieci dzielonej oraz semaforow standardu POSIX. Zamiast potoku uzyto 
+     N-elementowego bufora cyklicznego umieszczonego w pamieci dzielonej, 
+     gdzie elementem bufora  jest pewna ustalona porcja bajtow. Dostep do 
+     wspolnego bufora synchronizowany przy pomocy semaforow.
+      Program sklada sie z pieciu modulow: 
+    1)main.c - program glowny
+    2)sem.c, sem.h - funkcji semafora 
+    3)shmem.c, shmem.h - funkcji pamieci dzielonej 
+    4)producer.c - program producenta.
+    5)consumer.c - program konsumenta.
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszej programy, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, w terminalu nalezy wpisac:
+	make libsem.a libshmem.so main.x producer.x consumer.x
+	./main.x
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
