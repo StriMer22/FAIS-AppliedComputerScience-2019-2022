@@ -1,0 +1,46 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 28.04.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 1 przykladowa programe w jezyku C:
+--------------------------------------------------------------------
+
+I.    Zaimplementowanie problemu "Producenta i Konsumenta", przy pomocy 
+    programy, ktora:
+    (a) utworzy potok nazwany, nastepnie przy pomocy funkcji fork() utworzy 
+    dwa procesy potomne, w ktorych przy użyciu wywolania exec uruchomi 
+    odpowiednio programy "producenta" i "konsumenta", a na koncu poczeka 
+    na ich zakonczenie i usunie potok. 
+    (b) utworzy potok nazwany z poziomu powloki(uruchomienia programu z 
+    roznych terminali), na koncu usuwamy ten potok.
+     Program sklada sie z trzech modulow: 
+     1) main.c  - program glowny.
+     2) producer.c - program producenta.
+     3) consumer.c - program konsumenta.
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszej programy, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac komende:
+(dla uruchomienia musi byc plik tekstowy "file_in.txt")
+       make startCW_5a - uruchomienia podpunktu(a)
+       make startCW_5b - uruchomienia podpunktu(b)
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

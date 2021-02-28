@@ -1,0 +1,27 @@
+Dane wspoldzielone:
+int N; //rozmiar bufora
+int buf[N]; //bufor
+int beg = 0, end = 0; //miejsca w buforze
+semid wolne = N;
+semid zajete = 0;
+semid prod = 1, kons = 0;
+
+Producent:
+dopoki sa elementy do wyslania
+ P(prod);
+ P(wolne);
+ buf[end] = element;
+ end += 1 mod N;
+ V(zajete);
+ V(prod);
+
+Konsument:
+dopoki sa elementy do odebrania
+ P(kons);
+ P(zajete);
+ element = buf[beg];
+ beg += 1 mod N;
+ V(wolne);
+ V(kons);
+
+

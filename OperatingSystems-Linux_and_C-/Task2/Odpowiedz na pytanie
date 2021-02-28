@@ -1,0 +1,5 @@
+Ile procesow powstanie przy n-krotnym wywolaniu funkcji fork-exec jak wyzej i dlaczego ?
+	
+Przy n-krotnym wywolaniu funkcji fork-exec powstanie 3 potomnych procesy + 1 poczatkowy.
+
+
