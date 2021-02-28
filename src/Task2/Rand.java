@@ -1,6 +1,5 @@
 package Task2;
 
-
 public class Rand {
     public static double rand() {
         while (true) {

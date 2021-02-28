@@ -1,5 +1,4 @@
 package Task1;
-
 import java.util.Formatter;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

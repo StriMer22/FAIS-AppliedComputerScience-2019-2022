@@ -1,5 +1,4 @@
 package Task1;
-
 import java.io.IOException;
 
 public class Cards implements Card{
