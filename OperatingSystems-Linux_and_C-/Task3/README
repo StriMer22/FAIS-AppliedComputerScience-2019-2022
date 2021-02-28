@@ -1,0 +1,51 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 07.04.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 3 przykladowe programy w jezyku C:
+--------------------------------------------------------------------
+
+I.   Program do obslugi sygnalow(wykonania operacji domyslnej,ignorowania 
+     oraz  przechwycenia i w lasnej obslugi sygnalu). Przyjmuje parametry 
+     z terminala przy uruchomieniu.
+     Program sklada sie z jednego modulu: 
+     1) cw3_a.c  - program glowny.
+
+II.  Program, ktory za pomoca funkcji execl() uruchamia program(cw3_a.c) 
+     w procesie potomnym. Przyjmuje parametry z terminala przy uruchomieniu.
+     Progran sklada sie z jednego modulu:
+     1) cw3_b.c - program glowny.
+
+III. Trzeci program tworzy proces potomny, który staje sie liderem wlasnej 
+     grupy, a takze tworzy wlasne procesy potomne. Pozniej wysyla sygnaly
+     do calej grupy procesow potomnych.
+     Przyjmuje parametry z terminala przy uruchomieniu.
+     Progran sklada sie z jednego modulu:
+     1) cw3_c_2.c - program glowny.
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic powyzsze programy, nalezy wykonac komende:
+       make startCW_a - I program (wykorzystanie argumenta signal_handler)
+       make startCW_b - II program (wykorzystanie argumenta default)
+       make startCW_c - III program (wykorzystanie argumenta ignore)
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

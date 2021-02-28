@@ -1,0 +1,39 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 21.04.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 1 przykladowa programe w jezyku C:
+--------------------------------------------------------------------
+
+I.   Zaimplementowanie problemu "Producenta i Konsumenta", przy pomocy 
+   programy, ktory: tworzy ninazwany potok do komunikacji miedzy 
+   producentem a konsumentem; Producent przesyła fragmentami zawartość 
+   pliku tekstowego do potoku, a Konsument odczytuje zawartość potoku i 
+   zapisuje do innego pliku tekstowego
+     Program sklada sie z jednego modulu: 
+     1) cw4.c  - program glowny.
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszej programy, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac komende:
+       make startCW_4 (dla uruchomienia musi byc plik tekstowy "file_in.txt")
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
