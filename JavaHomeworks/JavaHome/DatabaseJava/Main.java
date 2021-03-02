@@ -1,4 +1,4 @@
-package JavaHomeworks.DatabaseJava;
+package JavaHome.DatabaseJava;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package JavaHomeworks.DataFrameJava;
+package JavaHome.DataFrameJava;
 
 public final class COOValue {
     public final int index;

@@ -1,4 +1,4 @@
-package JavaHomeworks.DatabaseJava;
+package JavaHome.DatabaseJava;
 
 public class Book {
     String isbn;
