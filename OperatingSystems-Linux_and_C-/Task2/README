@@ -1,0 +1,41 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 24.03.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 2 przykladowe programy w jezyku C:
+--------------------------------------------------------------------
+
+I.  Program tworzacy procesy potomne i uruchamiajacy w nowym programu 
+    za pomoca funkcji fork() oraz exec().
+    Program sklada sie z jednego modulu: 
+    1) cw_mod_b.c  - program glowny.
+
+II. Program wypisujacy identyfikatory dla danego procesu.
+    Progran sklada sie z jednego modulu:
+    1) cw_b.c - program glowny.
+
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania programy 'cw_mod_b.c', a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac komende:
+       make startCW
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+

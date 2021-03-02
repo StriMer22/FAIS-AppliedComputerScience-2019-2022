@@ -1,0 +1,40 @@
+========================================================================
+Autor: Dmytro Boiko,                               Krakow, 09.06.2020
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog zawiera 1 przykladowa programe w jezyku C:
+--------------------------------------------------------------------
+
+I.    Zaimplementowanie zadania wzajemnego wykluczania dla watkow. Watek 
+    wykonuje swoja sekcje prywatna, wypisuje komunikat po lewej stronie 
+    okna konsoli, a w sekcji krytycznej drukuje informacje po prawej stronie. 
+    Do zademonstrowania operacji na zasobie dzielonym uzyto wspolnej zmiennej 
+    licznikowej.
+     Program sklada sie z jednego modulu: 
+     1) main.c  - program glowny.
+------------------------------------------------------------------------
+
+* Jak uruchomic program:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszej programy, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic program, nalezy wykonac komende:
+       (make fully => ./main.x THREAD_COUNT CYCLE_COUNT)
+       make startCW
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make cleaner
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
