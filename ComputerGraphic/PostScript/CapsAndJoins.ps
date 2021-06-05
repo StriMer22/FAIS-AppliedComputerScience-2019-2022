@@ -1,0 +1,54 @@
+currentpagedevice 50 750 translate
+/LINE {
+        newpath
+        0 0 moveto
+	0 100 lineto
+	100 0 lineto
+        stroke
+} def
+/EXTERNALCOLOR {
+	2 setlinewidth 1 1 0 0 setrgbcolor
+} def
+/INTERNALCOLOR {
+	10 setlinewidth 0 0 1 0 setrgbcolor
+} def
+/UPLINE {
+	0 150 translate
+} def
+/LINEDOWN {
+	0 -150 translate
+} def
+/LINENEXT {
+	100 10 20 mul 0 translate
+} def
+
+/i 0 def
+0 1 2 {
+LINEDOWN
+i setlinejoin 0 setlinecap INTERNALCOLOR LINE
+EXTERNALCOLOR LINE
+/i i 1 add def
+} for
+
+/i 2 def
+LINENEXT
+LINEDOWN
+0 1 2 {
+UPLINE
+i setlinejoin 1 setlinecap INTERNALCOLOR LINE
+EXTERNALCOLOR LINE
+/i i 1 sub def
+} for
+
+/i 0 def
+LINENEXT
+UPLINE
+0 1 2 {
+LINEDOWN
+i setlinejoin 2 setlinecap INTERNALCOLOR LINE
+EXTERNALCOLOR LINE
+/i i 1 add def
+} for
+
+
+
