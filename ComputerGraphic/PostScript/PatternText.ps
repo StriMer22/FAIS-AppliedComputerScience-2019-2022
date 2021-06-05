@@ -1,0 +1,33 @@
+/Times-Roman 100 selectfont
+
+<<
+/PaintType 1
+/PatternType 1 
+/TilingType 1
+/BBox [0 0 30 30]
+/XStep 30 /YStep 30
+/#PentaStar{
+	gsave
+	0 10 moveto
+	4{144 rotate 0 10 lineto}repeat
+	closepath fill
+	grestore
+}
+/PaintProc {
+	begin
+	1 1 0 setrgbcolor
+	18 20 translate #PentaStar
+	32 30 translate #PentaStar
+	-30 0 translate #PentaStar
+	30 -30 translate #PentaStar
+	end
+}
+>>
+
+matrix 
+makepattern /Star4 exch def
+0 100 translate
+0.33 0.33 1 setrgbcolor 0 0 moveto 20 30(Blue) ashow
+Star4 setpattern 0 0 moveto 20 30(Blue) ashow
+0.33 0.33 1 setrgbcolor 275 100 moveto 30 -30(jeans) ashow
+Star4 setpattern 275 100 moveto 30 -30(jeans) ashow
