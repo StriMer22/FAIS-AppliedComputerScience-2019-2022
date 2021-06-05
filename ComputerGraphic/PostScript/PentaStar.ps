@@ -1,0 +1,22 @@
+/n 5 def
+ 
+/s { gsave } def
+/r { grestore } def
+/c { 0 1 0.5 setrgbcolor } def
+/t { 100 exch translate } def
+/rgbW { 1 0 0.5 setrgbcolor } def
+/w { 0 6 85 0 360 arc } def
+
+/PentaStar {
+  0 0 moveto
+  newpath 
+  s w rgbW closepath stroke r
+  newpath
+  0 90 moveto
+  180 90 n div sub rotate
+  n { 0 160  rlineto 180 180 n div sub rotate } repeat
+  closepath
+} def
+
+s 570 t PentaStar s c fill r stroke r  
+s 370 t PentaStar s c eofill r stroke r
