@@ -1,0 +1,64 @@
+/fontsize 40 def
+/font { /Times-Bold fontsize selectfont } def
+/lineWidth { 5 setlinewidth } def
+/color { h s v sethsbcolor } def
+
+/#R.frame {
+    newpath
+    lineWidth
+    0 radius moveto
+    0 height width height radius arcto
+    width height width 0 radius arcto
+    width 0 0 0 radius arcto
+    0 0 0 height radius arcto
+    17 {pop} repeat 
+    closepath
+} def
+
+/marginM {
+    font
+    15 20 moveto 
+    (M) stringwidth 
+    pop
+} def
+
+/#FText {
+    /radius exch def /text exch def
+    marginM
+    font text show
+    text false charpath
+    pathbbox
+    /upper-y exch def /right-x exch def
+    /lower-y exch def /left-x exch def
+    /width right-x left-x sub marginM add def
+    /height upper-y lower-y sub fontsize add def
+    #R.frame 
+} def
+
+/#PremiumText {
+    /h exch def /s exch def /v exch def
+    #FText
+    gsave
+    h 0.1 v sethsbcolor
+    fill
+    grestore
+    color
+    marginM 
+    font text show pop
+
+} def
+
+100 100 translate
+(AD) 20 #FText 	stroke
+
+0 125 translate
+(^@AD:"_!`~) 10 #FText stroke
+
+0 125 translate
+(GhostScript) 35 1 1 1 #PremiumText stroke
+
+0 130 translate
+(Hello World!) 25 1 0.5 0.5 #PremiumText stroke
+
+0 140 translate
+(Premium) 0 1 1 0.8 #PremiumText stroke
