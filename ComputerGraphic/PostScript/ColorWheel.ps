@@ -1,0 +1,28 @@
+/brstep .01 def
+
+/position {
+	150 630 moveto
+  	150 630 100 br mul
+	} def
+
+/ColorWheel { 
+	/degstep exch def
+	1 brstep neg brstep {
+		/br exch def
+		0 degstep 360 {
+			/deg exch def
+  			deg 360 div br 1 sethsbcolor
+			position
+			deg dup degstep add arc closepath fill
+		} for 
+	} for
+} def
+
+1 ColorWheel
+
+/position {
+	450 630 moveto
+  	450 630 100 br mul
+	} def
+
+8 ColorWheel
