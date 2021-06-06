@@ -14,35 +14,34 @@ gsave fill grestore stroke
 	/P3y exch def /P3x exch def
 	/P2y exch def /P2x exch def
 	/P1y exch def /P1x exch def
+	/x exch def /y exch def
 
 	newpath
-	P1x P1x #closedpoint P3x P3y #closedpoint
+	x y #closedpoint P3x P3y #closedpoint
 	P1x P1y #openpoint P2x P2y #openpoint
 	stroke
 	closepath
-	
-	newpath
+
 	gsave
   	[3 3] 0 setdash
-	P1x P1x moveto P1x P1y lineto
+	x y moveto P1x P1y lineto
 	P3x P3y moveto P2x P2y lineto
 	stroke
 	grestore	
-	closepath
-	
-	newpath
-	P1x P1x moveto
+
+	x y moveto
 	P1x P1y P2x P2y P3x P3y curveto
 	0 1 0 setrgbcolor
-	stroke
-	closepath
 } def
 
+0 0 translate
+100 100 150 350 200 250 250 100 #Bezier stroke
+
 100 250 translate
-0 330 150 220 200 100 #Bezier 
+100 100 0 330 150 220 200 100 #Bezier stroke
 
 150 300 translate
-250 163 23 171 109 74 #Bezier
+100 100 200 25 330 110 109 174 #Bezier stroke
 
 -200 0 translate
-74 109 171 23 163 250 #Bezier 
+100 100 250 163 23 171 109 74 #Bezier stroke
