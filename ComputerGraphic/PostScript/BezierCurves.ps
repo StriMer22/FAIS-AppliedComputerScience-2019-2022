@@ -1,0 +1,48 @@
+/#closedpoint {
+1 0 0 setrgbcolor
+2.5 0 360 arc 
+gsave fill grestore stroke
+} def
+
+/#openpoint {
+0 0 0 setrgbcolor
+2.5 0 360 arc 
+gsave fill grestore stroke
+} def
+
+/#Bezier {
+	/P3y exch def /P3x exch def
+	/P2y exch def /P2x exch def
+	/P1y exch def /P1x exch def
+
+	newpath
+	P1x P1x #closedpoint P3x P3y #closedpoint
+	P1x P1y #openpoint P2x P2y #openpoint
+	stroke
+	closepath
+	
+	newpath
+	gsave
+  	[3 3] 0 setdash
+	P1x P1x moveto P1x P1y lineto
+	P3x P3y moveto P2x P2y lineto
+	stroke
+	grestore	
+	closepath
+	
+	newpath
+	P1x P1x moveto
+	P1x P1y P2x P2y P3x P3y curveto
+	0 1 0 setrgbcolor
+	stroke
+	closepath
+} def
+
+100 250 translate
+0 330 150 220 200 100 #Bezier 
+
+150 300 translate
+250 163 23 171 109 74 #Bezier
+
+-200 0 translate
+74 109 171 23 163 250 #Bezier 
